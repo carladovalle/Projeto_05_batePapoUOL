@@ -85,4 +85,26 @@ function carregarParticipantes () {
     console.log(promiseCarregar);
 }
 
+function enviarMensagem () {
+    let mensagem = document.querySelector(".caixaMensagem textarea").value;
+    if (mensagem) {
+        let objetoMensagem = {
+            from: usuario.name,
+            to: contato,
+            text: mensagem,
+            type: type,
+        }
+        const promiseEnviar = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", objetoMensagem);
+        promiseEnviar.then(mensagemEnviada);
+        promiseEnviar.catch(mensagemErro);
+    }    
+}
 
+function mensagemEnviada () {
+    document.querySelector(".caixaMensagem textarea").value="";
+    carregarDados();
+}
+
+function mensagemErro(){
+    window.location.reload();
+}
