@@ -32,15 +32,18 @@
     <div class="telaMensagens escondido">
         <header class="topo">
             <img src="images\logo 1.png" class="tamlogo">
-            <ion-icon class="people_icon" name="people"></ion-icon>
+            <ion-icon class="contatos" name="people" ></ion-icon>
         </header>
         <main> <ul></ul> </main>
         <footer class="barraInferior">
             <div class="caixaMensagem">
                 <textarea id="caixaMensagem" cols="1" rows="1" autocomplete="off" placeholder="Escreva aqui..."></textarea>
             </div>
-            <ion-icon class="paper-plane_icon" name="paper-plane-outline" data-identifier="send-message" onclick="enviarMensagem()"></ion-icon>
+            <ion-icon class="direct" name="paper-plane-outline" data-identifier="send-message" onclick="enviarMensagem()"></ion-icon>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
